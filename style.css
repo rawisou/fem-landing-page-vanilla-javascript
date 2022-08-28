@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+:root {
+    --color-almost-white: hsl(0, 0%, 98%);
+    --color-medium-grey: hsl(0, 0%, 41%);
+    --color-almost-black: hsl(0, 0%, 8%);
+}
+
+/* Hidden elements on mobile view */
+.hero-img-desktop {
+    display: none;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    width: 55px;
+}
+
+.menu-toggle div {
+    background-color: #ccc;
+    border-radius: 25px;
+    box-shadow: 0px 3px 13px rgba(0, 0, 0, .08);
+    height: 7px;
+}
+
+.menu-toggle .one,
+.menu-toggle .two {
+    margin-bottom: 7px;
+}
+
+/* When we click the hamburger nav, the li will appear */
+.main-nav-list::before,
+.main-nav-list::after {
+    background-color: rgb(118, 131, 250);
+    content: "";
+    position: absolute;
+}
+
+.main-nav-list ul {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.main-nav-list a {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    opacity: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Change nav style when clicked */
+.masthead.active h1 {
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, .4);
+}
+
+.menu-toggle.active .one {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .4);
+    transform: translate(0, 14px) rotate(45deg);
+}
+
+/*The second line in the hamburger becomes transparent */
+.menu-toggle.active .two {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.menu-toggle.active .three {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .4);
+    transform: translate(0, -14px) rotate(-45deg);
+}
+
+.main-nav-list.active ul {
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.main-nav-list.active a {
+    opacity: 1;
+}
