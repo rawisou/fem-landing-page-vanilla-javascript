@@ -2,7 +2,12 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    color: #fff;
+}
+
+body {
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
 
 :root {
@@ -11,26 +16,36 @@
     --color-almost-black: hsl(0, 0%, 8%);
 }
 
+nav {
+    display: flex;
+    padding: 10px;
+}
 /* Hidden elements on mobile view */
 .hero-img-desktop {
     display: none;
 }
 
+.hero-img-mobile {
+    max-width: 365px;
+    height: 261px;
+}
+
 .menu-toggle {
+    position: absolute;
+    right: 5vw;
     cursor: pointer;
-    width: 55px;
+    width: 50px;
 }
 
 .menu-toggle div {
-    background-color: #ccc;
-    border-radius: 25px;
+    background-color: var(--color-almost-black);
     box-shadow: 0px 3px 13px rgba(0, 0, 0, .08);
-    height: 7px;
+    height: 3px;
 }
 
 .menu-toggle .one,
 .menu-toggle .two {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
 }
 
 /* When we click the hamburger nav, the li will appear */
@@ -66,7 +81,7 @@
 
 .menu-toggle.active .one {
     box-shadow: 0px 3px 3px rgba(0, 0, 0, .4);
-    transform: translate(0, 14px) rotate(45deg);
+    transform: translate(0, 3px) rotate(45deg);
 }
 
 /*The second line in the hamburger becomes transparent */
